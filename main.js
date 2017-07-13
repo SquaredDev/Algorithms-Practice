@@ -197,14 +197,36 @@ return the array [ 1, 1.25, 1.5, 1.75, 2 ]
 let interpolate = function( start, end, count ){
     // YOUR CODE HERE
     let returnArray = []
-    let whackTheMole = ((end - start) /count)
-    console.log(whackTheMole);
     returnArray.push(start)
+    let whackTheMole = ((end - start) /count)
     let temp = start
-    for (let i = 1; i < count; i++) {
+    for (let i = 1; i <= count; i++) {
       temp += whackTheMole
       returnArray.push(temp)
     }
-    returnArray.push(end)
     return returnArray
 }
+
+console.log(interpolate(2,4,8));
+
+
+//Bubble Sort challenges
+// bubbleSort(numbers); // ==> [1, 2, 4, 5, 8, 9]
+
+let numbers = [4, 5, 1, 8, 9, 2];
+
+function bubbleSort(array) {
+  for (let i=0; i < array.length-1; i++) {
+    for (let j=i+1; j < array.length; j++) {
+      if (array[i] > array[j]) {
+        let holdMyBeerArrayI = array[i];
+        array[i] = array[j];
+        array[j] = holdMyBeerArrayI;
+        console.log(array);
+      }
+    }
+  }
+  return array;
+}
+
+console.log(bubbleSort(numbers));
