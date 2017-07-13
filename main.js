@@ -201,7 +201,7 @@ let interpolate = function( start, end, count ){
     console.log(whackTheMole);
     returnArray.push(start)
     let temp = start
-    for (let i = 0; i < count - 1; i++) {
+    for (let i = 1; i < count; i++) {
       temp += whackTheMole
       returnArray.push(temp)
     }
