@@ -40,10 +40,20 @@ ANSWER: This function should return:
 
 let singles = [ "a", "b", "c", "d" ];
 
-function arrayCombos(){
+function arrayCombos(insert){
     // YOUR CODE HERE
-}
+    let combos = []
+    for (let i = 0; i < insert.length; i++) {
+      for (var j = 0; j < insert.length; j++) {
+        let holdMyBeer = []
+        holdMyBeer.push(insert[i])
+        holdMyBeer.push(insert[j])
+        combos.push(holdMyBeer)
+      }
 
+    }
+    return combos
+}
 
 /*** 2 ***/
 /*******************
@@ -93,8 +103,13 @@ let timeOfDay = 500;
 
 function navigateRushHour( timeOfDay ){
     // YOUR CODE HERE
+    if ((timeOfDay > 600 && timeOfDay < 900) || (timeOfDay > 1600 && timeOfDay < 1800) ) {
+      return "The time of day is " + timeOfDay + ", I'm going around the city."
+    }
+    else {
+      return "The time of day is " + timeOfDay + ", I'm going through the city.";
+    }
 }
-
 
 
 
@@ -128,11 +143,12 @@ var num = 6;
 
 let factorial = function( num ){
     // YOUR CODE HERE
+    let factorThis = 1
+    for (var i = 1; i <= num; i++) {
+      factorThis *= i
+    }
+    return factorThis
 };
-
-
-
-
 
 /*** 4 ***/
 /*******************
