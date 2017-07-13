@@ -196,4 +196,15 @@ return the array [ 1, 1.25, 1.5, 1.75, 2 ]
 
 let interpolate = function( start, end, count ){
     // YOUR CODE HERE
+    let returnArray = []
+    let whackTheMole = ((end - start) /count)
+    console.log(whackTheMole);
+    returnArray.push(start)
+    let temp = start
+    for (let i = 0; i < count - 1; i++) {
+      temp += whackTheMole
+      returnArray.push(temp)
+    }
+    returnArray.push(end)
+    return returnArray
 }
